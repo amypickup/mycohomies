@@ -10,8 +10,9 @@ export default function Footer() {
               href="https://www.buymeacoffee.com/pickup"
               className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-amber-300 hover:from-blue-400 hover:to-violet-600"
             >
-              Buy me a (mushroom) coffee ☕
-            </Link>
+              Buy me a (mushroom) coffee
+            </Link>{" "}
+            ☕
           </li>
           <li>
             <Link href="/studio/desk">Sanity Studio</Link>
