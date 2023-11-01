@@ -10,7 +10,7 @@ export default async function Home() {
 
   return (
     <div className="text-center">
-      <div className="bg-gradient-to-r from-red-400 via-orange-400 to-amber-300">
+      <div className="bg-gradient-to-r from-red-400 via-orange-400 to-amber-300 border-b border-zinc-800">
         <div className="italic p-3 md:p-5 text-3xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-violet-600 via-blue-400 to-green-400">
           mycohomies
         </div>
@@ -24,7 +24,7 @@ export default async function Home() {
           priority={true}
           className="w-full"
         />
-        <div className="relative bg-gradient-to-r from-red-400 via-orange-400 to-amber-300">
+        <div className="relative bg-gradient-to-r from-red-400 via-orange-400 to-amber-300 border-t border-zinc-800">
           <NewsletterSubscribe />
         </div>
       </div>
