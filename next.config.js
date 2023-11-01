@@ -4,7 +4,7 @@ const nextConfig = {
     domains: ["cdn.sanity.io"],
   },
   env: {
-    NEXT_PUBLIC_SANITY_DATASET: process.env.NEXT_PUBLIC_SANITY_DATASET,
+    SANITY_STUDIO_DATASET: process.env.SANITY_STUDIO_DATASET,
   },
 };
 
