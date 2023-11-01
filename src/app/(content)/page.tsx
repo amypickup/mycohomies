@@ -1,8 +1,6 @@
 import NewsletterSubscribe from "../components/NewsletterSubscribe";
-import SquareHero from "../components/SquareHero";
 import { getHeros } from "../../../sanity/lib/query";
 import type { HeroType } from "../types";
-import { urlForImage } from "../../../sanity/lib/image";
 import Image from "next/image";
 
 export default async function Home() {
