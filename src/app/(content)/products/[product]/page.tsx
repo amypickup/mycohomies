@@ -72,13 +72,8 @@ export default async function Product({ params }: Props) {
 
   return (
     <section className="max-w-6xl mx-auto">
-      <div className="grid grid-cols-1 md:grid-cols-8 md:gap-x-8 md:gap-y-3">
-        <div className="col-span-3">
-          <h1 className="font-semibold text-4xl mb-2 px-3 md:px-0">
-            {product.title}
-          </h1>
-        </div>
-        <div className="col-span-5">
+      <div className="flex">
+        <div className="">
           <Image
             src={urlForImage(product.mainImage)
               .width(800)
@@ -90,9 +85,24 @@ export default async function Product({ params }: Props) {
             alt={product.mainImage?.alt || product.title}
             priority={true}
           />
+          {product.productImages.map((image) => (
+            <Image
+              src={urlForImage(image)
+                .width(800)
+                .fit("max")
+                .auto("format")
+                .url()}
+              width={200}
+              height={200}
+              alt={"secondary image"}
+            />
+          ))}
         </div>
-        <div className="col-span-3">
-          <PortableText value={product.body} components={productComponents} />
+        <div className="">
+          <h1 className="font-semibold text-4xl mb-2 px-3 md:px-0">
+            {product.title}
+          </h1>
+          <PortableText value={product.body} />
         </div>
       </div>
     </section>

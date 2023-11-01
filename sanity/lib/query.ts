@@ -16,3 +16,27 @@ export async function getProduct(slug: string) {
       { slug }
     );
   }
+
+export async function getFeaturedProducts() {
+  return client.fetch(
+    groq`*[_type == "product"]{
+      _id,
+      _type,
+      title,
+      description,
+      mainImage,
+    }`
+  );
+}
+
+export async function getHeros() {
+  return client.fetch(
+    groq`*[_type == "hero"]{
+      _id,
+      title,
+      lead,
+      linkUrl,
+      image,
+    }`
+  );
+}

@@ -2,9 +2,9 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-zinc-800 mt-44">
-      <div className="max-w-7xl mx-auto flex lg:flex-row flex-col items-center lg:justify-between justify-center gap-y-4 md:px-16 px-6 py-16 text-zinc-400">
-        <ul className="text-sm">
+    <footer className="border-t border-zinc-800 mt-0">
+      <div className="max-w-7xl mx-auto flex md:flex-row flex-col items-left md:items-center md:justify-between justify-center gap-y-4 md:px-3 px-3 py-3 md:py-16 text-zinc-400">
+        <ul className="text-md">
           <li>
             <Link
               href="https://www.buymeacoffee.com/pickup"
