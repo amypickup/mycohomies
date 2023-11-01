@@ -73,31 +73,33 @@ const NewsletterForm = ({ status, message, onValidated }: Props) => {
   };
 
   return (
-    <div className="flex flex-col md:flex-row text-left items-left md:items-center max-w-7xl mx-auto py-4">
-      <div className="grow p-3">
-        Subscribe to our newsletter to receive special offers and a first look
-        at new products 😍
+    <div className="max-w-7xl mx-auto py-4">
+      <div className="flex flex-col md:flex-row text-left items-left md:items-center">
+        <div className="grow p-3">
+          Subscribe to our newsletter to receive special offers and a first look
+          at new products 😍
+        </div>
+        <div className="px-3">
+          <input
+            onChange={(event) => setEmail(event?.target?.value ?? "")}
+            type="email"
+            placeholder="Your email"
+            className="appearance-none border border-gray-400 border-b block pl-4 pr-6 py-2 w-full bg-white text-sm placeholder-gray-400 text-gray-700 focus:bg-white focus:placeholder-gray-600 focus:text-gray-700 focus:outline-none"
+            onKeyUp={(event: React.KeyboardEvent<HTMLInputElement>) =>
+              handleInputKeyEvent(event)
+            }
+          />
+        </div>
+        <div className="button-wrap wp-block-button p-3">
+          <button
+            className="cursor-pointer text-white bg-indigo-500 border-0 py-2 px-5 focus:outline-none hover:bg-indigo-600 rounded"
+            onClick={handleFormSubmit}
+          >
+            Submit
+          </button>
+        </div>
       </div>
-      <div className="px-3">
-        <input
-          onChange={(event) => setEmail(event?.target?.value ?? "")}
-          type="email"
-          placeholder="Your email"
-          className="appearance-none border border-gray-400 border-b block pl-4 pr-6 py-2 w-full bg-white text-sm placeholder-gray-400 text-gray-700 focus:bg-white focus:placeholder-gray-600 focus:text-gray-700 focus:outline-none"
-          onKeyUp={(event: React.KeyboardEvent<HTMLInputElement>) =>
-            handleInputKeyEvent(event)
-          }
-        />
-      </div>
-      <div className="button-wrap wp-block-button p-3">
-        <button
-          className="cursor-pointer text-white bg-indigo-500 border-0 py-2 px-5 focus:outline-none hover:bg-indigo-600 rounded"
-          onClick={handleFormSubmit}
-        >
-          Submit
-        </button>
-      </div>
-      <div className="min-h-42px px-3">
+      <div className="min-h-42px px-3 text-right">
         {"sending" === status ? <div>Myceliating... </div> : null}
         {"error" === status || error ? (
           <div
