@@ -1,6 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
-import { Url } from "next/dist/shared/lib/router/router";
 
 type Props = {
   title: string;
