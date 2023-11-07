@@ -23,7 +23,12 @@ export type HeroType = {
   lead: string,
   linkUrl: Url,
   image: {
+    _type: string,
     alt: string,
     image: string
+    asset: {
+      _type: string,
+      _ref: string,
+    }
   },
 };

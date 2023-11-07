@@ -24,6 +24,7 @@ export default function SanityHero({
             priority={true}
             className="z-0 object-center object-cover pointer-events-none"
             fill={true}
+            key={image.asset._ref}
           />
         </div>
         <div className="absolute z-1 inset-y-50% text-white uppercase px-3 md:px-6 text-2xl md:text-4xl border-white hover:text-purple-400 hover:duration-300">
