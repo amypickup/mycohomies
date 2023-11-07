@@ -29,11 +29,9 @@ export default function Footer() {
                 </Link>{" "}
                 ☕
               </li>
-              {process.env.ENV === "production" ? null : (
-                <li>
-                  <Link href="/studio/desk">Sanity Studio</Link>
-                </li>
-              )}
+              <li>
+                <Link href="/studio/desk">Sanity Studio</Link>
+              </li>
             </ul>
           </div>
           <div className="mb-8">
