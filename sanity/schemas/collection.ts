@@ -1,8 +1,8 @@
 import { defineField, defineType } from "sanity";
 
 export default defineType({
-  name: "category",
-  title: "Category",
+  name: "collection",
+  title: "Collection",
   type: "document",
   fields: [
     defineField({
@@ -11,19 +11,13 @@ export default defineType({
       type: "string",
     }),
     defineField({
-      name: "slug",
-      title: "Slug",
-      type: "slug",
-      options: {
-        source: "title",
-        maxLength: 200,
-        slugify: (input) =>
-          input.toLowerCase().replace(/\s+/g, "-").slice(0, 200),
-      },
-    }),
-    defineField({
       name: "description",
       title: "Description",
+      type: "text",
+    }),
+    defineField({
+      name: "prompt",
+      title: "Prompt",
       type: "text",
     }),
   ],

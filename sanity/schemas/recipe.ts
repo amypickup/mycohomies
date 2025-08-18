@@ -1,8 +1,8 @@
 import { defineField, defineType } from "sanity";
 
 export default defineType({
-  name: "post",
-  title: "Post",
+  name: "recipe",
+  title: "Recipe",
   type: "document",
   fields: [
     defineField({
@@ -14,6 +14,17 @@ export default defineType({
       name: "description",
       title: "Description",
       type: "string",
+    }),
+    defineField({
+      name: "collection",
+      title: "Collection",
+      type: "reference",
+      to: { type: "collection" },
+    }),
+    defineField({
+      name: "story",
+      title: "Story",
+      type: "text",
     }),
     defineField({
       name: "slug",
@@ -64,9 +75,39 @@ export default defineType({
       type: "datetime",
     }),
     defineField({
-      name: "body",
-      title: "Body",
-      type: "blockContent",
+      name: "time",
+      title: "Time",
+      type: "string",
+    }),
+    defineField({
+      name: "ingredientsImport",
+      title: "Ingredients",
+      type: "array",
+      of: [
+        {
+          type: "object",
+          fields: [
+            {
+              name: "sectionTitle",
+              title: "Ingredient Section Title",
+              type: "string",
+            },
+            {
+              name: "sectionIngredients",
+              title: "Ingredient Section List",
+              type: "array",
+              of: [{ type: "string" }],
+            },
+          ],
+        },
+      ],
+    }),
+    defineField({
+      name: "instructions",
+      title: "Instructions",
+      description: "Enter each step as a new text box in the group",
+      type: "array",
+      of: [{ type: "text" }],
     }),
   ],
 

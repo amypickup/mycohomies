@@ -1,7 +1,7 @@
 import Image from "next/image";
 import type { HeroType } from "../types";
 import Link from "next/link";
-import { urlForImage } from "../../../sanity/lib/image";
+import { urlForImage } from "@sanity/lib/image";
 import localFont from "next/font/local";
 
 const lemonMilk = localFont({ src: "../fonts/LEMONMILK-Bold.otf" });
@@ -10,9 +10,7 @@ type Props = {
   hero: HeroType;
 };
 
-export default function SanityHero({
-  hero: { title, lead, linkUrl, image },
-}: Props) {
+export default function ({ hero: { title, lead, linkUrl, image } }: Props) {
   return (
     <Link href={linkUrl}>
       {lead ? <div className="uppercase align-left">{lead}</div> : null}
