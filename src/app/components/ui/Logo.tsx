@@ -1,6 +1,6 @@
 import localFont from "next/font/local";
 
-const puffyHearts = localFont({ src: "../fonts/PuffyHearts-Bold.otf" });
+const puffyHearts = localFont({ src: "../../fonts/PuffyHearts-Bold.otf" });
 
 export default function Logo() {
   return (

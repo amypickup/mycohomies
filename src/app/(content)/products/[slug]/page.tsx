@@ -1,9 +1,9 @@
 import Image from "next/image";
 import { Metadata } from "next";
-import { getProduct } from "../../../../../sanity/lib/query";
+import { getProduct } from "@sanity/lib/query";
 import type { ProductType } from "../../../types";
 import { PortableText, PortableTextComponents } from "@portabletext/react";
-import { urlForImage } from "../../../../../sanity/lib/image";
+import { urlForImage } from "@sanity/lib/image";
 
 type Props = {
   params: {
