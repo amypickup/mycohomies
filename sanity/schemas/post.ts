@@ -40,16 +40,16 @@ export default defineType({
         hotspot: true,
       },
       fields: [
-        {
+        defineField({
           name: "alt",
           title: "Alt",
           type: "string",
-        },
-        {
+        }),
+        defineField({
           name: "caption",
           title: "Caption",
           type: "string",
-        },
+        }),
       ],
     }),
     defineField({

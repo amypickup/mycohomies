@@ -1,4 +1,4 @@
-import { defineType, defineArrayMember } from "sanity";
+import { defineType, defineField, defineArrayMember } from "sanity";
 
 /**
  * This is the schema type for block content used in the post document type
@@ -51,11 +51,11 @@ export default defineType({
             name: "link",
             type: "object",
             fields: [
-              {
+              defineField({
                 title: "URL",
                 name: "href",
                 type: "url",
-              },
+              }),
             ],
           },
         ],
@@ -68,11 +68,11 @@ export default defineType({
       type: "image",
       options: { hotspot: true },
       fields: [
-        {
+        defineField({
           name: "alt",
           type: "string",
           title: "Alternative Text",
-        },
+        }),
       ],
     }),
   ],

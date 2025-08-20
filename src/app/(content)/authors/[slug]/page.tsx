@@ -5,11 +5,9 @@ import type { AuthorType } from "@app/types";
 import { PortableText, PortableTextComponents } from "@portabletext/react";
 import { urlForImage } from "@sanity/lib/image";
 
-type Props = {
-  params: {
-    author: string;
-  };
-};
+interface Props {
+  params: Promise<{ slug: string }>;
+}
 
 // Dynamic metadata for SEO
 /*
@@ -38,7 +36,7 @@ const authorBioComponents: PortableTextComponents = {
 };
 
 export default async function Author({ params }: Props) {
-  const slug = params.author;
+  const { slug } = await params;
   const author: AuthorType = await getAuthor(slug);
 
   return (

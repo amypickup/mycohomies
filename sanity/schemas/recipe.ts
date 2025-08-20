@@ -51,16 +51,16 @@ export default defineType({
         hotspot: true,
       },
       fields: [
-        {
+        defineField({
           name: "alt",
           title: "Alt",
           type: "string",
-        },
-        {
+        }),
+        defineField({
           name: "caption",
           title: "Caption",
           type: "string",
-        },
+        }),
       ],
     }),
     defineField({
@@ -87,17 +87,17 @@ export default defineType({
         {
           type: "object",
           fields: [
-            {
+            defineField({
               name: "sectionTitle",
               title: "Ingredient Section Title",
               type: "string",
-            },
-            {
+            }),
+            defineField({
               name: "sectionIngredients",
               title: "Ingredient Section List",
               type: "array",
               of: [{ type: "string" }],
-            },
+            }),
           ],
         },
       ],

@@ -5,15 +5,13 @@ import type { ProductType } from "../../../types";
 import { PortableText, PortableTextComponents } from "@portabletext/react";
 import { urlForImage } from "@sanity/lib/image";
 
-type Props = {
-  params: {
-    product: string;
-  };
-};
+interface Props {
+  params: Promise<{ slug: string }>;
+}
 
 // Dynamic metadata for SEO
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const slug = params.product;
+  const { slug } = await params;
   const product: ProductType = await getProduct(slug);
 
   return {
@@ -67,7 +65,7 @@ const productComponents: PortableTextComponents = {
 };
 
 export default async function Product({ params }: Props) {
-  const slug = params.product;
+  const { slug } = await params;
   const product: ProductType = await getProduct(slug);
 
   return (

@@ -27,11 +27,11 @@ export default defineType({
         hotspot: true,
       },
       fields: [
-        {
+        defineField({
           name: 'alt',
           type: 'string',
           title: 'Alternative Text',
-        }
+        }),
       ]
     }),
     defineField({

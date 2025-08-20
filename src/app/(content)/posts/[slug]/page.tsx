@@ -5,15 +5,13 @@ import type { PostType } from "@app/types";
 import { PortableText, PortableTextComponents } from "@portabletext/react";
 import { urlForImage } from "@sanity/lib/image";
 
-type Props = {
-  params: {
-    post: string;
-  };
-};
+interface Props {
+  params: Promise<{ slug: string }>;
+}
 
 // Dynamic metadata for SEO
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const slug = params.post;
+  const { slug } = await params;
   const post: PostType = await getPost(slug);
 
   return {
@@ -67,7 +65,7 @@ const postComponents: PortableTextComponents = {
 };
 
 export default async function Post({ params }: Props) {
-  const slug = params.post;
+  const { slug } = await params;
   const post: PostType = await getPost(slug);
   const publishedTime = new Date(post.publishedAt).toLocaleTimeString("en-US", {
     year: "numeric",

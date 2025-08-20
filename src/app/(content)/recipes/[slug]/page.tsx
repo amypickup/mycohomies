@@ -4,15 +4,13 @@ import { getRecipe } from "@sanity/lib/query";
 import type { RecipeType } from "@app/types";
 import { urlForImage } from "@sanity/lib/image";
 
-type Props = {
-  params: {
-    recipe: string;
-  };
-};
+interface Props {
+  params: Promise<{ slug: string }>;
+}
 
 // Dynamic metadata for SEO
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const slug = params.recipe;
+  const { slug } = await params;
   const recipe: RecipeType = await getRecipe(slug);
 
   return {
@@ -27,7 +25,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function Recipe({ params }: Props) {
-  const slug = params.recipe;
+  const { slug } = await params;
   const recipe: RecipeType = await getRecipe(slug);
 
   const datePublished = new Date(recipe.publishedAt).toLocaleTimeString(
