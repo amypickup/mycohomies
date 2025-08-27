@@ -4,9 +4,6 @@ import SanityHero from "@components/SanityHero";
 import PageBreak from "@components/PageBreak";
 import Image from "next/image";
 import { urlForImage } from "@sanity/lib/image";
-import localFont from "next/font/local";
-
-const lemonMilk = localFont({ src: "../fonts/LEMONMILK-Bold.otf" });
 
 export default async function Home() {
   const heros: HeroType[] = await getHeros();

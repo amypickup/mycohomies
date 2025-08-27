@@ -29,7 +29,11 @@ export type PostType = {
   publishedAt: string;
 };
 
-type IngredientSection = { sectionTitle: string; sectionIngredients: string[]; _key: string };
+type IngredientSection = {
+  sectionTitle: string;
+  sectionIngredients: string[];
+  _key: string;
+};
 
 export type RecipeType = {
   _id: string;
@@ -63,45 +67,45 @@ export type RecipeImportType = {
 };
 
 export type ProductType = {
-  _id: string,
-  _type: string,
-  title: string,
-  description: string,
-  slug: Slug,
+  _id: string;
+  _type: string;
+  title: string;
+  description: string;
+  slug: Slug;
   mainImage: {
-    alt: string,
-    image: string
-  },
-  productImages: Image[],
-  body: PortableTextBlock[],
-  publishedAt: string,
+    alt: string;
+    image: string;
+  };
+  productImages: Image[];
+  body: PortableTextBlock[];
+  publishedAt: string;
 };
 
 export type HeroType = {
-  _id: string,
-  _type: string,
-  title: string,
-  lead: string,
-  linkUrl: Url,
+  _id: string;
+  _type: string;
+  title: string;
+  lead: string;
+  linkUrl: Url;
   image: {
-    _type: string,
-    alt: string,
-    image: string
+    _type: string;
+    alt: string;
+    image: string;
     asset: {
-      _type: string,
-      _ref: string,
-    }
-  },
+      _type: string;
+      _ref: string;
+    };
+  };
 };
 
 export type CategoryWithDocumentsType = {
-  _id: string,
-  _type: string,
-  title: string,
-  slug: Slug,
-  description: string,
-  relatedDocuments: PostType[],
-}
+  _id: string;
+  _type: string;
+  title: string;
+  slug: Slug;
+  description: string;
+  relatedDocuments: PostType[];
+};
 
 export type DocumentType = {
   _id: string;

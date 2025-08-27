@@ -83,7 +83,7 @@ export default async function Product({ params }: Props) {
             alt={product.mainImage?.alt || product.title}
             priority={true}
           />
-          {product.productImages.map((image) => (
+          {product.productImages.map((image, index) => (
             <Image
               src={urlForImage(image)
                 .width(800)
@@ -93,6 +93,7 @@ export default async function Product({ params }: Props) {
               width={200}
               height={200}
               alt={"secondary image"}
+              key={index}
             />
           ))}
         </div>
@@ -100,7 +101,7 @@ export default async function Product({ params }: Props) {
           <h1 className="font-semibold text-4xl mb-2 px-3 md:px-0">
             {product.title}
           </h1>
-          <PortableText value={product.body} />
+          <PortableText value={product.body} components={productComponents} />
         </div>
       </div>
     </section>

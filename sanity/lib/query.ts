@@ -10,7 +10,7 @@ export async function getAuthors() {
       slug,
       image,
       bio,
-    }`
+    }`,
   );
 }
 
@@ -35,7 +35,7 @@ export async function getAuthor(slug: string) {
         },
        },
     }`,
-    { slug }
+    { slug },
   );
 }
 
@@ -48,7 +48,7 @@ export async function getPosts() {
       description,
       mainImage,
       slug,
-    }`
+    }`,
   );
 }
 
@@ -69,7 +69,7 @@ export async function getCategoryWithDocuments(slug: string) {
         slug,
       },
     }`,
-    { slug }
+    { slug },
   );
 }
 
@@ -89,7 +89,7 @@ export async function getPost(slug: string) {
       body,
       publishedAt,
     }`,
-    { slug }
+    { slug },
   );
 }
 
@@ -104,7 +104,7 @@ export async function getRecipes() {
         name,
       },
       slug,
-    }`
+    }`,
   );
 }
 
@@ -127,7 +127,7 @@ export async function getRecipe(slug: string) {
       instructions,
       publishedAt,
     }`,
-    { slug }
+    { slug },
   );
 }
 
@@ -143,7 +143,7 @@ export async function getProduct(slug: string) {
         publishedAt,
         body,
       }`,
-    { slug }
+    { slug },
   );
 }
 
@@ -155,7 +155,7 @@ export async function getFeaturedProducts() {
       title,
       description,
       mainImage,
-    }`
+    }`,
   );
 }
 
@@ -167,7 +167,7 @@ export async function getHeros() {
       lead,
       linkUrl,
       image,
-    }`
+    }`,
   );
 }
 export async function getDocuments() {
@@ -183,6 +183,6 @@ export async function getDocuments() {
       slug,
       description,
       publishedAt,
-    }`
+    }`,
   );
 }

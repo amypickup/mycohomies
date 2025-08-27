@@ -1,5 +1,5 @@
-import { createClient, type ClientConfig } from 'next-sanity'
-import { apiVersion, dataset, projectId, useCdn } from '../env'
+import { createClient, type ClientConfig } from "next-sanity";
+import { apiVersion, dataset, projectId, useCdn } from "../env";
 
 const config: ClientConfig = {
   apiVersion,

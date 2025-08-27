@@ -36,7 +36,7 @@ export default async function Recipe({ params }: Props) {
       day: "numeric",
       hour: "2-digit",
       minute: "2-digit",
-    }
+    },
   );
 
   return (
@@ -112,7 +112,7 @@ export default async function Recipe({ params }: Props) {
                   ))}
                 </ul>
               </div>
-            )
+            ),
           )}
         </div>
         <div className="col-span-5 border-black border-t-4 mx-4 md:mx-0">
