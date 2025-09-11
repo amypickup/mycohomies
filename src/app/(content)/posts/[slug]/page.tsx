@@ -77,7 +77,7 @@ export default async function Post({ params }: Props) {
 
   return (
     <main className="max-w-6xl mx-auto">
-      <div className="max-w-3xl mx-auto">
+      <div className="max-w-3xl mx-auto text-black dark:text-white">
         <div className="block">
           <h1 className="font-bold max-w-xl min-w-xl text-4xl mx-auto mb-2 px-3 md:px-0">
             {post.title}
