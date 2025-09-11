@@ -34,9 +34,13 @@ export default async function Home() {
                     />
                   ) : null}
                 </div>
-                <h3 className="mt-4 text-lg font-semibold">{recipe.title}</h3>
+                <h3 className="mt-4 text-lg font-semibold text-orange-400">
+                  {recipe.title}
+                </h3>
                 {recipe.author ? (
-                  <p className="text-sm font-light">{recipe.author.name}</p>
+                  <p className="text-sm font-light text-pink-400">
+                    {recipe.author.name}
+                  </p>
                 ) : null}
               </a>
             ))}
@@ -71,7 +75,9 @@ export default async function Home() {
                   />
                 ) : null}
               </div>
-              <h3 className="mt-4 text-lg font-semibold">{doc.title}</h3>
+              <h3 className="mt-4 text-lg font-semibold text-orange-400">
+                {doc.title}
+              </h3>
               {doc.author ? (
                 <p className="text-sm font-light">{doc.author.name}</p>
               ) : null}

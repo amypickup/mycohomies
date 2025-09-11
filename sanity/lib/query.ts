@@ -67,6 +67,11 @@ export async function getCategoryWithDocuments(slug: string) {
         description,
         mainImage,
         slug,
+        author->{
+          name,
+          slug,
+          image,
+        },
       },
     }`,
     { slug },

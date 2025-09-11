@@ -17,7 +17,7 @@ export default function SanityHero({
     <Link href={linkUrl}>
       {lead ? <div className="uppercase align-left">{lead}</div> : null}
       <div className="relative">
-        <div className="relative w-full h-0 pb-100%">
+        <div className="relative w-full h-0 pb-[100%]">
           <Image
             src={urlForImage(image).width(800).fit("max").auto("format").url()}
             alt={image.alt || title}
@@ -27,7 +27,7 @@ export default function SanityHero({
             key={image.asset._ref}
           />
         </div>
-        <div className="absolute z-1 inset-y-50% text-white uppercase px-3 md:px-6 text-2xl md:text-4xl border-white hover:text-purple-400 hover:duration-300">
+        <div className="absolute z-1 inset-y-[50%] text-white uppercase px-3 md:px-6 text-2xl md:text-4xl border-white hover:text-purple-400 hover:duration-300">
           <span className={lemonMilk.className}>{title}</span>
         </div>
       </div>
