@@ -94,7 +94,7 @@ export default async function Recipe({ params }: Props) {
           {recipe.story}
         </div>
 
-        <div className="col-span-3 border-black dark:border-violet-600 border-t-4 mx-4 md:mx-0">
+        <div className="col-span-3 border-black dark:border-blue-400 border-t-4 mx-4 md:mx-0">
           <div className="uppercase font-bold text-lg mb-6">Ingredients</div>
           {recipe.ingredientsImport.map(
             ({ sectionTitle, sectionIngredients, _key }) => (
@@ -115,7 +115,7 @@ export default async function Recipe({ params }: Props) {
             ),
           )}
         </div>
-        <div className="col-span-5 border-black dark:border-violet-600 border-t-4 mx-4 md:mx-0">
+        <div className="col-span-5 border-black dark:border-blue-400 border-t-4 mx-4 md:mx-0">
           <div className="uppercase font-bold text-lg mb-6">Preparation</div>
           {recipe.instructions.map((instruction, index) => (
             <div key={index}>

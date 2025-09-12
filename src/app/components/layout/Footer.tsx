@@ -4,7 +4,7 @@ import Logo from "@components/ui/Logo";
 export default function Footer() {
   return (
     <footer className="border-t border-pink-200 dark:border-violet-600 border-opacity-20 mt-0 text-md">
-      <div className="max-w-8xl px-6 md:px-8 lg:px-12 mx-auto py-3 md:py-16 text-zinc-400">
+      <div className="max-w-8xl px-6 md:px-8 lg:px-12 mx-auto py-3 md:py-16 text-black dark:text-white">
         <div className="mb-8 text-5xl">
           <Logo />
         </div>
@@ -41,7 +41,7 @@ export default function Footer() {
           <iframe
             src="https://mycohomies.substack.com/embed"
             height="320"
-            className="w-full max-w-md"
+            className="w-full max-w-md rounded-3xl"
           ></iframe>
           <div className="items-right">
             <div className="hover:text-black duration-200">

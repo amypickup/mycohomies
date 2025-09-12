@@ -10,7 +10,7 @@ export default {
   argTypes: {
     variant: {
       control: "select",
-      options: ["primary", "secondary", "destructive"],
+      options: ["primary", "secondary"],
     },
   },
   args: {
@@ -28,11 +28,5 @@ export const Primary = {
 export const Secondary = {
   args: {
     variant: "secondary",
-  },
-};
-
-export const Destructive = {
-  args: {
-    variant: "destructive",
   },
 };
