@@ -4,11 +4,16 @@ import Logo from "@components/ui/Logo";
 export default function Footer() {
   return (
     <footer className="border-t border-pink-200 dark:border-violet-600 border-opacity-20 mt-0 text-md">
-      <div className="max-w-8xl px-6 md:px-8 lg:px-12 mx-auto py-3 md:py-16 text-black dark:text-white">
+      <div className="max-w-7xl px-6 md:px-8 lg:px-12 mx-auto py-3 md:py-16 text-black dark:text-white">
         <div className="mb-8 text-5xl">
           <Logo />
         </div>
-        <div className="flex md:flex-row flex-col items-left md:items-center md:justify-between justify-center">
+        <div className="flex gap-8 md:flex-row flex-col items-left md:items-start md:justify-start justify-center mb-8">
+          <iframe
+            src="https://mycohomies.substack.com/embed"
+            height="200"
+            className="w-full max-w-lg rounded-3xl text-left border border-pink-200 dark:border-violet-600"
+          ></iframe>
           <div className="flex flex-col gap-3">
             <ul className="flex flex-col gap-3">
               <li>
@@ -38,15 +43,10 @@ export default function Footer() {
               </li>
             </ul>
           </div>
-          <iframe
-            src="https://mycohomies.substack.com/embed"
-            height="320"
-            className="w-full max-w-md rounded-3xl"
-          ></iframe>
-          <div className="items-right">
-            <div className="hover:text-black duration-200">
-              &copy; {new Date().getFullYear()} Amy Pickup. All rights reserved.
-            </div>
+        </div>
+        <div className="items-right">
+          <div className="hover:text-black duration-200 font-light">
+            &copy; {new Date().getFullYear()} Amy Pickup. All rights reserved.
           </div>
         </div>
       </div>

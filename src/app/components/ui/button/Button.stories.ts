@@ -1,27 +1,29 @@
 import { Button } from "./Button";
+import { expect, fn, userEvent } from "storybook/test";
+import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 
-export default {
+const meta = {
   title: "Button",
   component: Button,
   parameters: {
     layout: "centered",
   },
-  tags: ["autodocs"],
-  argTypes: {
-    variant: {
-      control: "select",
-      options: ["primary", "secondary"],
-    },
-  },
   args: {
     isDisabled: false,
     children: "Button",
   },
-};
+} satisfies Meta<typeof Button>;
 
-export const Primary = {
+export default meta;
+type Story = StoryObj<typeof meta>;
+
+export const Primary: Story = {
   args: {
     variant: "primary",
+  },
+  play: async ({ canvas, args }) => {
+    await userEvent.click(await canvas.getByRole("button"));
+    await expect(args.onClick).toHaveBeenCalled();
   },
 };
 
