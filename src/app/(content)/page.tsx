@@ -43,9 +43,10 @@ export default async function Home() {
           {ai.relatedDocuments.map((document) => (
             <Card
               key={document._id}
-              href={`recipes/${document.slug.current}`}
+              href={`${document._type}s/${document.slug.current}`}
               image={urlForImage(document.mainImage).width(400).url()}
               title={document.title}
+              description={document.description}
               author={document.author?.name}
             />
           ))}

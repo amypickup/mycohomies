@@ -2,18 +2,19 @@
 
 import React from "react";
 import Image from "next/image";
-
+import Link from "next/link";
 export interface CardProps {
   href: string;
   image: string;
   title: string;
+  description?: string;
   author?: string;
 }
 
 export function Card(props: CardProps) {
   return (
     <article {...props}>
-      <a href={props.href} className={"hover:opacity-75"}>
+      <Link href={props.href} className={"hover:opacity-75"}>
         <div className="overflow-hidden bg-gray-200 rounded-3xl">
           {props.image ? (
             <Image
@@ -29,13 +30,16 @@ export function Card(props: CardProps) {
           <h3 className="mt-2 text-lg font-semibold text-black dark:text-white">
             {props.title}
           </h3>
+          {props.description ? (
+            <p className="text-sm font-light">{props.description}</p>
+          ) : null}
           {props.author ? (
             <p className="text-sm font-light text-black dark:text-white">
               {props.author}
             </p>
           ) : null}
         </section>
-      </a>
+      </Link>
     </article>
   );
 }

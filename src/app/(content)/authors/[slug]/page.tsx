@@ -42,16 +42,16 @@ export default async function Author({ params }: Props) {
   return (
     <main className="pt-12 max-w-3xl mx-auto px-3 md:px-0">
       <div className="md:flex mb-4 px-3 md:px-0">
-        <div className="md:basis-1/6">
+        <div className="md:basis-1/5 pr-3">
           <Image
-            width={100}
-            height={100}
-            src={urlForImage(author.image).width(300).height(300).url()}
+            width={400}
+            height={400}
+            src={urlForImage(author.image).width(400).height(400).url()}
             alt={author.name}
             className="mb-4 md:mr-4 rounded-full"
           />
         </div>
-        <div className="md:basis-3/4 text-sm">
+        <div className="md:basis-4/5 text-sm">
           <div className="text-3xl">{author.name}</div>
           <PortableText value={author.bio} components={authorBioComponents} />
         </div>
@@ -75,29 +75,36 @@ export default async function Author({ params }: Props) {
               href={`/${doc._type}s/${doc.slug.current}`}
               className="group md:flex"
             >
-              <div className="md:basis-1/6">{datePublished}</div>
-              <div className="md:basis-1/2 px-3 md:px-0 mb-4">
-                <h3 className="text-xl md:text-2xl font-bold group-hover:text-indigo-700">
-                  {doc.title}
-                </h3>
-                <p className="text-smgroup-hover:text-indigo-700">
-                  {doc.description}
-                </p>
-                <p className="text-xs font-light uppercase group-hover:text-indigo-700">
-                  By {doc.author.name}
-                </p>
+              <div className="px-3 md:px-0 md:basis-1/5 text-xs font-light pt-1.5">
+                {datePublished}
               </div>
-              <div className="mb-4 md:auto">
-                {doc.mainImage ? (
-                  <Image
-                    src={urlForImage(doc.mainImage).width(600).url()}
-                    width={200}
-                    height={200}
-                    alt={doc.title}
-                    className="object-contain w-500 h-500 group-hover:invert"
-                  />
-                ) : null}
-              </div>
+              <article className="md:basis-4/5 flex">
+                <div className="px-3 md:px-0 mb-4 flex-2">
+                  <h3 className="text-xl md:text-2xl font-bold group-hover:text-indigo-700">
+                    {doc.title}
+                  </h3>
+                  <p className="text-smgroup-hover:text-indigo-700">
+                    {doc.description}
+                  </p>
+                  <p className="text-xs font-light uppercase group-hover:text-indigo-700">
+                    By {doc.author.name}
+                  </p>
+                </div>
+                <div className="mb-4 flex-1">
+                  {doc.mainImage ? (
+                    <Image
+                      src={urlForImage(doc.mainImage)
+                        .width(400)
+                        .height(400)
+                        .url()}
+                      width={200}
+                      height={200}
+                      alt={doc.title}
+                      className="object-cover group-hover:invert"
+                    />
+                  ) : null}
+                </div>
+              </article>
             </a>
           );
         })}

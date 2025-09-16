@@ -1,5 +1,5 @@
 import { Button } from "./Button";
-import { expect, fn, userEvent } from "storybook/test";
+import { expect, userEvent } from "storybook/test";
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 
 const meta = {

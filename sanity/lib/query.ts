@@ -48,6 +48,7 @@ export async function getPosts() {
       description,
       mainImage,
       slug,
+      publishedAt,
     }`,
   );
 }
@@ -72,6 +73,7 @@ export async function getCategoryWithDocuments(slug: string) {
           slug,
           image,
         },
+        publishedAt,
       },
     }`,
     { slug },

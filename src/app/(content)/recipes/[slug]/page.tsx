@@ -3,6 +3,7 @@ import { Metadata } from "next";
 import { getRecipe } from "@sanity/lib/query";
 import type { RecipeType } from "@app/types";
 import { urlForImage } from "@sanity/lib/image";
+import Link from "next/link";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -40,7 +41,7 @@ export default async function Recipe({ params }: Props) {
   );
 
   return (
-    <main className="max-w-8xl px-0 pt-4 md:px-6 md:pt-8 lg:px-12 lg:pt-12 mx-auto">
+    <main className="max-w-7xl px-6 pt-4 md:px-8 md:pt-8 lg:px-12 lg:pt-12 mx-auto">
       <div className="grid grid-cols-1 md:grid-cols-8 md:gap-x-8 md:gap-y-3 text-black dark:text-white">
         <div className="col-span-3">
           <h1 className="font-semibold text-4xl mb-2 px-4 md:px-0">
@@ -62,12 +63,12 @@ export default async function Recipe({ params }: Props) {
               <div className="inline-block text-sm align-middle">
                 <div>
                   By{" "}
-                  <a
+                  <Link
                     href={`/authors/${recipe.author.slug.current}`}
                     className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
                   >
                     {recipe.author.name}
-                  </a>
+                  </Link>
                 </div>
                 <div className="font-light text-xs">{datePublished}</div>
               </div>
