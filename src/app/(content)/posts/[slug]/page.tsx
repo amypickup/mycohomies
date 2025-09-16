@@ -111,7 +111,7 @@ export default async function Post({ params }: Props) {
               <div>
                 By{" "}
                 <Link
-                  href={"/authors"}
+                  href={`/authors/${post.author.slug.current}`}
                   className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
                 >
                   {post.author.name}

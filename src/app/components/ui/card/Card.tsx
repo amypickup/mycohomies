@@ -14,7 +14,7 @@ export interface CardProps {
 export function Card(props: CardProps) {
   return (
     <article {...props}>
-      <Link href={props.href} className={"hover:opacity-75"}>
+      <Link href={props.href} className={"hover:opacity-60"}>
         <div className="overflow-hidden bg-gray-200 rounded-3xl">
           {props.image ? (
             <Image

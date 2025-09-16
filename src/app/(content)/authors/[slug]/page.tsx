@@ -80,13 +80,13 @@ export default async function Author({ params }: Props) {
               </div>
               <article className="md:basis-4/5 flex">
                 <div className="px-3 md:px-0 mb-4 flex-2">
-                  <h3 className="text-xl md:text-2xl font-bold group-hover:text-indigo-700">
+                  <h3 className="text-xl md:text-2xl font-bold group-hover:opacity-60">
                     {doc.title}
                   </h3>
-                  <p className="text-smgroup-hover:text-indigo-700">
+                  <p className="text-sm group-hover:opacity-60">
                     {doc.description}
                   </p>
-                  <p className="text-xs font-light uppercase group-hover:text-indigo-700">
+                  <p className="text-xs font-light uppercase group-hover:opacity-60">
                     By {doc.author.name}
                   </p>
                 </div>
@@ -100,7 +100,7 @@ export default async function Author({ params }: Props) {
                       width={200}
                       height={200}
                       alt={doc.title}
-                      className="object-cover group-hover:invert"
+                      className="object-cover group-hover:opacity-60"
                     />
                   ) : null}
                 </div>
