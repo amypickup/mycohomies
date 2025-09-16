@@ -41,6 +41,7 @@ const data = [
     image:
       "https://images.unsplash.com/photo-1572782132197-79d85a8d16de?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     title: "Entangled Life",
+    description: "My favorite book about all the best mushroom things.",
     author: "Merlin Sheldrake",
   },
 ];
@@ -48,7 +49,7 @@ const data = [
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const GridTemplate = (args) => (
+const GridTemplate = (args: { className: string }) => (
   <div
     className={clsx(
       "grid gap-3 max-w-7xl bg-white dark:bg-black",
@@ -62,11 +63,7 @@ const GridTemplate = (args) => (
         title={card.title}
         author={card.author}
         description={card.description}
-        category={card.category}
-        date={card.date}
         href={card.href}
-        variant={args.variant}
-        size={args.size}
       />
     ))}
   </div>
