@@ -31,7 +31,9 @@ export function Card(props: CardProps) {
             {props.title}
           </h3>
           {props.description ? (
-            <p className="text-sm font-light">{props.description}</p>
+            <p className="text-sm font-light text-black dark:text-white">
+              {props.description}
+            </p>
           ) : null}
           {props.author ? (
             <p className="text-sm font-light text-black dark:text-white">

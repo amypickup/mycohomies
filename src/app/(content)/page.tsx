@@ -37,21 +37,23 @@ export default async function Home() {
           ))}
         </div>
       </section>
-      <section>
-        <PageBreak title={ai.title.toLowerCase()} />
-        <div className="grid grid-rows-1 md:grid-cols-3 gap-4 my-9">
-          {ai.relatedDocuments.map((document) => (
-            <Card
-              key={document._id}
-              href={`${document._type}s/${document.slug.current}`}
-              image={urlForImage(document.mainImage).width(400).url()}
-              title={document.title}
-              description={document.description}
-              author={document.author?.name}
-            />
-          ))}
-        </div>
-      </section>
+      {ai.relatedDocuments.length > 0 ? (
+        <section>
+          <PageBreak title={ai.title.toLowerCase()} />
+          <div className="grid grid-rows-1 md:grid-cols-3 gap-4 my-9">
+            {ai.relatedDocuments.map((document) => (
+              <Card
+                key={document._id}
+                href={`${document._type}s/${document.slug.current}`}
+                image={urlForImage(document.mainImage).width(400).url()}
+                title={document.title}
+                description={document.description}
+                author={document.author?.name}
+              />
+            ))}
+          </div>
+        </section>
+      ) : null}
     </div>
   );
 }
