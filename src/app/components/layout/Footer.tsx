@@ -18,19 +18,6 @@ export default function Footer() {
           <div className="flex flex-col gap-3">
             <ul className="flex flex-col gap-3">
               <li>
-                <Link href="https://woodwide.vercel.app/" className="">
-                  AI-Generated Mushroom Recipes
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/products/mycohomies-subscription-box-pre-order"
-                  className=""
-                >
-                  Mycohomies Subscription Box
-                </Link>
-              </li>
-              <li>
                 <Link href="https://www.buymeacoffee.com/pickup">
                   <Rainbow>Buy me a (mushroom) coffee</Rainbow>
                 </Link>{" "}
