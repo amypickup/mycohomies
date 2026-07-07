@@ -42,7 +42,7 @@ export default async function Recipe({ params }: Props) {
 
   return (
     <main className="max-w-7xl px-6 pt-4 md:px-8 md:pt-8 lg:px-12 lg:pt-12 mx-auto">
-      <div className="grid grid-cols-1 md:grid-cols-8 md:gap-x-8 md:gap-y-3 text-black dark:text-white">
+      <div className="grid grid-cols-1 md:grid-cols-8 md:gap-x-8 md:gap-y-3">
         <div className="col-span-3">
           <h1 className="font-semibold text-4xl mb-2 px-4 md:px-0">
             {recipe.title}
@@ -65,7 +65,7 @@ export default async function Recipe({ params }: Props) {
                   By{" "}
                   <Link
                     href={`/authors/${recipe.author.slug.current}`}
-                    className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+                    className="font-medium text-blue-600 hover:underline"
                   >
                     {recipe.author.name}
                   </Link>
@@ -95,7 +95,7 @@ export default async function Recipe({ params }: Props) {
           {recipe.story}
         </div>
 
-        <div className="col-span-3 border-black dark:border-blue-400 border-t-4 mx-4 md:mx-0">
+        <div className="col-span-3 border-black border-t-4 mx-4 md:mx-0">
           <div className="uppercase font-bold text-lg mb-6">Ingredients</div>
           {recipe.ingredientsImport.map(
             ({ sectionTitle, sectionIngredients, _key }) => (
@@ -116,7 +116,7 @@ export default async function Recipe({ params }: Props) {
             ),
           )}
         </div>
-        <div className="col-span-5 border-black dark:border-blue-400 border-t-4 mx-4 md:mx-0">
+        <div className="col-span-5 border-black border-t-4 mx-4 md:mx-0">
           <div className="uppercase font-bold text-lg mb-6">Preparation</div>
           {recipe.instructions.map((instruction, index) => (
             <div key={index}>

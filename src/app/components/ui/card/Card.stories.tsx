@@ -50,12 +50,7 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 const GridTemplate = (args: { className: string }) => (
-  <div
-    className={clsx(
-      "grid gap-3 max-w-7xl bg-white dark:bg-black",
-      args.className,
-    )}
-  >
+  <div className={clsx("grid gap-3 max-w-7xl bg-white", args.className)}>
     {data.map((card) => (
       <Card
         key={card.id}

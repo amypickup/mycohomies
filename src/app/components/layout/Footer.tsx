@@ -4,7 +4,7 @@ import Logo from "@components/ui/Logo";
 export default function Footer() {
   return (
     <footer className="border-t border-pink-200 border-opacity-20 mt-0 text-md">
-      <div className="max-w-7xl px-6 md:px-8 lg:px-12 mx-auto py-3 md:py-16 text-black dark:text-white">
+      <div className="max-w-7xl px-6 md:px-8 lg:px-12 mx-auto py-3 md:py-16">
         <div className="mb-8 text-5xl">
           <Logo />
         </div>

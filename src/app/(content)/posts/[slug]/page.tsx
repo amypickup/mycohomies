@@ -78,7 +78,7 @@ export default async function Post({ params }: Props) {
 
   return (
     <main className="max-w-6xl mx-auto">
-      <div className="max-w-3xl mx-auto py-6 text-black dark:text-white">
+      <div className="max-w-3xl mx-auto py-6">
         <div className="block">
           <h1 className="font-bold max-w-xl text-4xl mx-auto mb-2 px-6 md:px-0">
             {post.title}
@@ -112,7 +112,7 @@ export default async function Post({ params }: Props) {
                 By{" "}
                 <Link
                   href={`/authors/${post.author.slug.current}`}
-                  className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+                  className="font-medium text-blue-600 hover:underline"
                 >
                   {post.author.name}
                 </Link>

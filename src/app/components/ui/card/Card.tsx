@@ -27,18 +27,12 @@ export function Card(props: CardProps) {
           ) : null}
         </div>
         <section>
-          <h3 className="mt-2 text-lg font-semibold text-black dark:text-white">
-            {props.title}
-          </h3>
+          <h3 className="mt-2 text-lg font-semibold">{props.title}</h3>
           {props.description ? (
-            <p className="text-sm font-light text-black dark:text-white">
-              {props.description}
-            </p>
+            <p className="text-sm font-light">{props.description}</p>
           ) : null}
           {props.author ? (
-            <p className="text-sm font-light text-black dark:text-white">
-              {props.author}
-            </p>
+            <p className="text-sm font-light">{props.author}</p>
           ) : null}
         </section>
       </Link>
