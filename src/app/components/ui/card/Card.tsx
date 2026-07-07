@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 export interface CardProps {
   href: string;
-  image: string;
+  image: string | null;
   title: string;
   description?: string;
   author?: string;
