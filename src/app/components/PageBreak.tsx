@@ -1,4 +1,5 @@
 import localFont from "next/font/local";
+import Rainbow from "./ui/rainbow/Rainbow";
 
 const puffyHearts = localFont({ src: "../fonts/PuffyHearts-Bold.otf" });
 
@@ -9,10 +10,8 @@ type Props = {
 export default function PageBreak({ title }: Props) {
   return (
     <h2 className="mb-8">
-      <span
-        className={`text-transparent ${puffyHearts.className} text-3xl md:text-5xl bg-clip-text bg-gradient-to-r from-pink-400 via-orange-400 to-amber-300 hover:from-violet-600 hover:via-sky-400 hover:to-teal-400`}
-      >
-        {title}
+      <span className={`${puffyHearts.className} text-3xl md:text-5xl`}>
+        <Rainbow>{title}</Rainbow>
       </span>
     </h2>
   );

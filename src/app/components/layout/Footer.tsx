@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Logo from "@components/ui/Logo";
+import Rainbow from "@components/ui/rainbow/Rainbow";
 
 export default function Footer() {
   return (
@@ -30,11 +31,8 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link
-                  href="https://www.buymeacoffee.com/pickup"
-                  className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-orange-400 to-amber-300 hover:from-violet-600 hover:via-sky-400 hover:to-teal-400"
-                >
-                  Buy me a (mushroom) coffee
+                <Link href="https://www.buymeacoffee.com/pickup">
+                  <Rainbow>Buy me a (mushroom) coffee</Rainbow>
                 </Link>{" "}
                 ☕
               </li>
