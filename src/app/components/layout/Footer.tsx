@@ -7,7 +7,9 @@ export default function Footer() {
     <footer className="border-t border-pink-200 border-opacity-20 mt-0 text-md">
       <div className="max-w-7xl px-6 md:px-8 lg:px-12 mx-auto py-3 md:py-16">
         <div className="mb-8 text-5xl">
-          <Logo />
+          <Link href="/">
+            <Logo />
+          </Link>
         </div>
         <div className="flex gap-8 md:flex-row flex-col items-left md:items-start md:justify-start justify-center mb-8">
           <iframe

@@ -14,7 +14,11 @@ export default async function Recipes() {
           <Card
             key={document._id}
             href={`recipes/${document.slug.current}`}
-            image={urlForImage(document.mainImage).width(300).url()}
+            image={
+              document.mainImage
+                ? urlForImage(document.mainImage).width(300).url()
+                : null
+            }
             title={document.title}
             author={document.author?.name}
           />

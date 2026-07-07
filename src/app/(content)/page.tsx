@@ -34,14 +34,16 @@ export default async function Home() {
           </div>
         </section>
       )}
-      <section>
-        <PageBreak title="mushroom projects" />
-        <div className="grid grid-rows-1 md:grid-cols-2 gap-4 my-9">
-          {heros.map((hero) => (
-            <SanityHero hero={hero} key={hero._id} />
-          ))}
-        </div>
-      </section>
+      {heros.length > 0 ? (
+        <section>
+          <PageBreak title="mushroom projects" />
+          <div className="grid grid-rows-1 md:grid-cols-2 gap-4 my-9">
+            {heros.map((hero) => (
+              <SanityHero hero={hero} key={hero._id} />
+            ))}
+          </div>
+        </section>
+      ) : null}
       {ai.relatedDocuments.length > 0 ? (
         <section>
           <PageBreak title={ai.title.toLowerCase()} />
