@@ -1,5 +1,4 @@
 import localFont from "next/font/local";
-import Rainbow from "./ui/rainbow/Rainbow";
 
 const puffyHearts = localFont({ src: "../fonts/PuffyHearts-Bold.otf" });
 

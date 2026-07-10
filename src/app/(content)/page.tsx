@@ -12,11 +12,11 @@ export default async function Home() {
   const ai: CategoryWithDocumentsType = await getCategoryWithDocuments("ai");
 
   return (
-    <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-12 py-6">
+    <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-12 py-12">
       {handmade.relatedDocuments.length > 0 && (
         <section>
-          <PageBreak title="latest recipes . handmade with love" />
-          <div className="grid grid-rows-1 md:grid-cols-3 gap-4 my-9">
+          {/*<PageBreak title="new recipes" />*/}
+          <div className="my-9">
             {handmade.relatedDocuments.length > 0 &&
               handmade.relatedDocuments.map((document) => (
                 <Card
@@ -28,7 +28,6 @@ export default async function Home() {
                       : null
                   }
                   title={document.title}
-                  author={document.author?.name}
                 />
               ))}
           </div>

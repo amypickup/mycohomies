@@ -31,11 +31,6 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-        <div className="items-right">
-          <div className="hover:text-black duration-200 font-light">
-            &copy; {new Date().getFullYear()} Amy Pickup. All rights reserved.
-          </div>
-        </div>
       </div>
     </footer>
   );
